@@ -215,11 +215,11 @@ action:
                           group: "frigate-notification-{{ camera }}"
                           # Android Specific
                           image: "/api/events/{{id}}/thumbnail.jpg?format=android"
-                          clickAction: "{{base_url}}/api/events/{{id}}/{{camera}}/clip.mp4"
+                          clickAction: "{{base_url}}/api/frigate/notifications/{{id}}/{{camera}}/clip.mp4"
                           ttl: "{{ iif(critical, 0, 3600000) }}"
                           priority: "{{ iif(critical, 'high', 'normal') }}"
                           # iOS Specific
-                          url: "{{base_url}}/api/events/{{id}}/{{camera}}/clip.mp4"
+                          url: "{{base_url}}/api/frigate/notifications/{{id}}/{{camera}}/clip.mp4"
                           attachment:
                             url: "/api/events/{{id}}/thumbnail.jpg"
                           push:
@@ -228,10 +228,10 @@ action:
                           actions:
                             - action: URI
                               title: View Clip
-                              uri: "{{base_url}}/api/events/{{id}}/{{camera}}/clip.mp4"
+                              uri: "{{base_url}}/api/frigate/notifications/{{id}}/{{camera}}/clip.mp4"
                             - action: URI
                               title: View Snapshot
-                              uri: "{{base_url}}/api/events/{{id}}/snapshot.jpg"
+                              uri: "{{base_url}}/api/frigate/notifications/{{id}}/snapshot.jpg"
                             - action: "silence-{{ camera }}"
                               title: Silence New Notifications
                               destructive: true
@@ -244,11 +244,11 @@ action:
                           group: "frigate-notification-{{ camera }}"
                           # Android Specific
                           image: "/api/events/{{id}}/thumbnail.jpg?format=android"
-                          clickAction: "{{base_url}}/api/events/{{id}}/{{camera}}/clip.mp4"
+                          clickAction: "{{base_url}}/api/frigate/notifications/{{id}}/{{camera}}/clip.mp4"
                           ttl: "{{ iif(critical, 0, 3600000) }}"
                           priority: "{{ iif(critical, 'high', 'normal') }}"
                           # iOS Specific
-                          url: "{{base_url}}/api/events/{{id}}/{{camera}}/clip.mp4"
+                          url: "{{base_url}}/api/frigate/notifications/{{id}}/{{camera}}/clip.mp4"
                           attachment:
                             url: "/api/events/{{id}}/thumbnail.jpg"
                           push:
@@ -257,10 +257,10 @@ action:
                           actions:
                             - action: URI
                               title: View Clip
-                              uri: "{{base_url}}/api/events/{{id}}/{{camera}}/clip.mp4"
+                              uri: "{{base_url}}/api/frigate/notifications/{{id}}/{{camera}}/clip.mp4"
                             - action: URI
                               title: View Snapshot
-                              uri: "{{base_url}}/api/events/{{id}}/snapshot.jpg"
+                              uri: "{{base_url}}/api/frigate/notifications/{{id}}/snapshot.jpg"
                             - action: "silence-{{ camera }}"
                               title: Silence New Notifications
                               destructive: true
@@ -303,11 +303,11 @@ action:
                                 group: "frigate-notification-{{ camera }}{{'-loitering' if loitering}}"
                                 # Android Specific
                                 image: "/api/events/{{id}}/thumbnail.jpg?format=android"
-                                clickAction: "{{base_url}}/api/events/{{id}}/{{camera}}/clip.mp4"
+                                clickAction: "{{base_url}}/api/frigate/notifications/{{id}}/{{camera}}/clip.mp4"
                                 ttl: "{{ iif(critical, 0, 3600000) }}"
                                 priority: "{{ iif(critical, 'high', 'normal') }}"
                                 # iOS Specific
-                                url: "{{base_url}}/api/events/{{id}}/{{camera}}/clip.mp4"
+                                url: "{{base_url}}/api/frigate/notifications/{{id}}/{{camera}}/clip.mp4"
                                 attachment:
                                   url: "/api/events/{{id}}/thumbnail.jpg"
                                 sound: "{{ iif(update, 'none', 'default') }}"
@@ -317,10 +317,10 @@ action:
                                 actions:
                                   - action: URI
                                     title: View Clip
-                                    uri: "{{base_url}}/api/events/{{id}}/{{camera}}/clip.mp4"
+                                    uri: "{{base_url}}/api/frigate/notifications/{{id}}/{{camera}}/clip.mp4"
                                   - action: URI
                                     title: View Snapshot
-                                    uri: "{{base_url}}/api/events/{{id}}/snapshot.jpg"
+                                    uri: "{{base_url}}/api/frigate/notifications/{{id}}/snapshot.jpg"
                                   - action: "silence-{{ camera }}"
                                     title: Silence New Notifications
                                     destructive: true
@@ -337,7 +337,7 @@ action:
                                 ttl: "{{ iif(critical, 0, 3600000) }}"
                                 priority: "{{ iif(critical, 'high', 'normal') }}"
                                 # iOS Specific
-                                url: "{{base_url}}/api/events/{{id}}/{{camera}}/clip.mp4"
+                                url: "{{base_url}}/api/frigate/notifications/{{id}}/{{camera}}/clip.mp4"
                                 attachment:
                                   url: "/api/events/{{id}}/thumbnail.jpg"
                                 sound: "{{ iif(update, 'none', 'default') }}"
@@ -347,7 +347,7 @@ action:
                                 actions:
                                   - action: URI
                                     title: View Clip
-                                    uri: "{{base_url}}/api/events/{{id}}/{{camera}}/clip.mp4"
+                                    uri: "{{base_url}}/api/frigate/notifications/{{id}}/{{camera}}/clip.mp4"
                                   - action: URI
                                     title: View Snapshot
                                     uri: "{{base_url}}/api/events/{{id}}/snapshot.jpg"
